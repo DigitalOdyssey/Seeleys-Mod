@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "PPP",
+        "PPP",
+        "PPP"
+    ],
+   
+    "key":
+    {
+        "P":
+        {
+            "item": "sm:purple_quartz"
+        }
+    },
+   
+    "result":
+    {
+        "item": "sm:purple_quartz_block",
+        "count": 1
+    }
+}
