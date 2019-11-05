@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " P ",
+        " P ",
+        " S "
+    ],
+   
+    "key":
+    {
+        "P":
+        {
+            "item": "sm:purple_quartz"
+        },
+        
+        "S":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "sm:purple_quartz_sword",
+        "count": 1
+    }
+}
