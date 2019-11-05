@@ -2,8 +2,10 @@ package com.thedigitalodyssey.seeleysmod;
 
 import com.thedigitalodyssey.seeleysmod.init.ModRecipes;
 import com.thedigitalodyssey.seeleysmod.proxy.CommonProxy;
+import com.thedigitalodyssey.seeleysmod.tabs.SeeleysTab;
 import com.thedigitalodyssey.seeleysmod.util.Reference;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -14,6 +16,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version =  Reference.VERSION)
 public class Main {
+	
+	public static final CreativeTabs seeleys_tab = new SeeleysTab("Seeley's Tab");
 	
 	@Instance
 	public static Main instance;
