@@ -1,5 +1,6 @@
 package com.thedigitalodyssey.seeleysmod.util.handlers;
 
+import com.thedigitalodyssey.seeleysmod.init.ModBiomes;
 import com.thedigitalodyssey.seeleysmod.init.ModBlocks;
 import com.thedigitalodyssey.seeleysmod.init.ModItems;
 import com.thedigitalodyssey.seeleysmod.util.IHasModel;
@@ -38,4 +39,7 @@ public class RegistryHandler {
 		}
 	}
 	
+	public static void otherRegistries() {
+		ModBiomes.registerBiomes();
+	}
 }

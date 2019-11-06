@@ -1,9 +1,14 @@
 
 //Items
 item.purple_quartz.name=Purple Quartz
+item.tyline_ore.name=Tyline Ore
 item.infernal_ore.name=Infernal Ore
+
 tile.purple_quartz_block.name=Purple Quartz Block
 tile.molten_purple_quartz.name=Molten Purple Quartz
+tile.purple_quartz_ore.name=Purple Quartz Ore
+tile.tyline.name=Tyline
+tile.hard_tyline.name=Hard Tyline
 
 item.purple_quartz_axe.name=Purple Quartz Axe
 item.purple_quartz_hoe.name=Purple Quartz Hoe

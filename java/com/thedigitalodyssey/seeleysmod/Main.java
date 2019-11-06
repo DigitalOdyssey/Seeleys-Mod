@@ -1,9 +1,13 @@
 package com.thedigitalodyssey.seeleysmod;
 
+import java.rmi.registry.Registry;
+
 import com.thedigitalodyssey.seeleysmod.init.ModRecipes;
 import com.thedigitalodyssey.seeleysmod.proxy.CommonProxy;
 import com.thedigitalodyssey.seeleysmod.tabs.SeeleysTab;
 import com.thedigitalodyssey.seeleysmod.util.Reference;
+import com.thedigitalodyssey.seeleysmod.util.handlers.RegistryHandler;
+import com.thedigitalodyssey.seeleysmod.world.ModWorldGen;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -13,6 +17,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version =  Reference.VERSION)
 public class Main {
@@ -28,7 +33,8 @@ public class Main {
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event)
 	{
-		
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
+		RegistryHandler.otherRegistries();
 	}
 	
 	@EventHandler

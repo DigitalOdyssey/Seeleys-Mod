@@ -29,6 +29,7 @@ public class ModItems {
 	
 	//Items
 	public static final Item PURPLE_QUARTZ = new ItemBase("purple_quartz");
+	public static final Item TYLINE_ORE = new ItemBase("tyline_ore");
 	public static final Item INFERNAL_ORE = new ItemBase("infernal_ore");
 	
 	//Tools
