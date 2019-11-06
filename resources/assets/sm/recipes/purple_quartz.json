@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+ 
+    "ingredients":
+    [
+ 
+    {
+      "item": "sm:purple_quartz_block"
+    }
+   
+    ],
+ 
+    "result":
+    {
+        "item": "sm:purple_quartz",
+        "count": 9
+    }
+}

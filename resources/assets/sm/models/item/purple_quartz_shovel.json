@@ -1,0 +1,7 @@
+{
+    "parent": "item/handheld",
+    "textures":
+    {
+        "layer0": "sm:items/purple_quartz_shovel"
+    }
+}
