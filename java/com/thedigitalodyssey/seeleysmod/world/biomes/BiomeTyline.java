@@ -1,5 +1,6 @@
 package com.thedigitalodyssey.seeleysmod.world.biomes;
 
+import com.thedigitalodyssey.seeleysmod.entity.EntityTylin;
 import com.thedigitalodyssey.seeleysmod.init.ModBlocks;
 
 import net.minecraft.init.Blocks;
@@ -20,5 +21,7 @@ public class BiomeTyline extends Biome {
 		this.spawnableCreatureList.clear();
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
+		
+		this.spawnableCreatureList.add(new SpawnListEntry(EntityTylin.class, 20, 10, 15));
 	}
 }

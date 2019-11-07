@@ -34,13 +34,14 @@ public class Main {
 	public static void PreInit(FMLPreInitializationEvent event)
 	{
 		GameRegistry.registerWorldGenerator(new ModWorldGen(), 3);
-		RegistryHandler.otherRegistries();
+		RegistryHandler.preInitRegistries(event);
 	}
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
 		ModRecipes.init();
+		RegistryHandler.initRegistries(event);
 	}
 	
 	@EventHandler

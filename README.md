@@ -10,7 +10,7 @@ An all-new resource that can be found underground that has better properties tha
 
 ## Tyline
 
-An new biome that consist of a strange, sand-like substance that when smelted, turns hard. This hard substance can be broken with a pickaxe to get tyline ore, but there is no current use for it.
+An new biome that consist of a strange, sand-like substance that when smelted, turns hard. This hard substance can be broken with a pickaxe to get tyline ore, but there is no current use for it. This biome also is home to the Tylin creatures, that are very similar to cows.
 
 ## Infernal Ore
 

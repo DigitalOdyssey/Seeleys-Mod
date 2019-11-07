@@ -4,6 +4,8 @@ item.purple_quartz.name=Purple Quartz
 item.tyline_ore.name=Tyline Ore
 item.infernal_ore.name=Infernal Ore
 
+entity.tylin.name=Tylin
+
 tile.purple_quartz_block.name=Purple Quartz Block
 tile.molten_purple_quartz.name=Molten Purple Quartz
 tile.purple_quartz_ore.name=Purple Quartz Ore

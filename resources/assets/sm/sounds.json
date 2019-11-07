@@ -1,0 +1,22 @@
+{
+    "entity.tylin.ambient":
+    {
+        "category":"entity",
+        "subtitle":"entity.tylin.ambient",
+        "sounds":[{"name":"sm:entity/tylin/ambient", "stream":true}]
+    },
+    
+    "entity.tylin.hurt":
+    {
+        "category":"entity",
+        "subtitle":"entity.tylin.hurt",
+        "sounds":[{"name":"sm:entity/tylin/hurt", "stream":true}]
+    },
+    
+    "entity.tylin.death":
+    {
+        "category":"entity",
+        "subtitle":"entity.tylin.death",
+        "sounds":[{"name":"sm:entity/tylin/death", "stream":true}]
+    }
+}

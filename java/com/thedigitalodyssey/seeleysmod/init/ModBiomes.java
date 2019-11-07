@@ -15,10 +15,10 @@ public class ModBiomes {
 	public static final Biome TYLINE = new BiomeTyline();
 	
 	public static void registerBiomes() {
-		initBiome(TYLINE, "Tyline", BiomeType.WARM, Type.WET, Type.MAGICAL, Type.LUSH);
+		registerBiome(TYLINE, "Tyline", BiomeType.WARM, Type.WET, Type.MAGICAL, Type.LUSH);
 	}
 	
-	private static Biome initBiome(Biome biome, String name, BiomeType biomeType, Type... types) {
+	private static Biome registerBiome(Biome biome, String name, BiomeType biomeType, Type... types) {
 		biome.setRegistryName(name);
 		ForgeRegistries.BIOMES.register(biome);
 		System.out.println("Biome Registered");

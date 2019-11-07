@@ -2,14 +2,18 @@ package com.thedigitalodyssey.seeleysmod.util.handlers;
 
 import com.thedigitalodyssey.seeleysmod.init.ModBiomes;
 import com.thedigitalodyssey.seeleysmod.init.ModBlocks;
+import com.thedigitalodyssey.seeleysmod.init.ModEntities;
 import com.thedigitalodyssey.seeleysmod.init.ModItems;
 import com.thedigitalodyssey.seeleysmod.util.IHasModel;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @EventBusSubscriber
@@ -39,7 +43,13 @@ public class RegistryHandler {
 		}
 	}
 	
-	public static void otherRegistries() {
+	public static void preInitRegistries(FMLPreInitializationEvent event) {
 		ModBiomes.registerBiomes();
+		ModEntities.registerEntities();
+		RenderHandler.registerEntityRenders();
+	}
+	
+	public static void initRegistries(FMLInitializationEvent event) {
+		SoundsHandler.registerSounds();
 	}
 }
