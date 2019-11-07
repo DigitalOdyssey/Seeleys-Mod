@@ -22,8 +22,6 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class ModWorldGen implements IWorldGenerator {
 	
-	private  WorldGenTrees tyline_tree = new WorldGenTrees(false, 5, Blocks.LOG2.getDefaultState(), Blocks.LEAVES.getDefaultState(), false);
-	
 	@Override
 	public void generate(Random rand, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		if(world.provider.getDimension() == 0) {
@@ -33,7 +31,6 @@ public class ModWorldGen implements IWorldGenerator {
 	
 	private void generateOverworld(Random rand, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		generateOre(ModBlocks.PURPLE_QUARTZ_ORE.getDefaultState(), world, rand, chunkX*16, chunkZ*16, 5, 20, rand.nextInt(4) + 2, 8);
-		generateTree(tyline_tree, world, rand, chunkX, chunkZ, 16, BiomeTyline.class);
 	}
 	
 	private void generateOre(IBlockState ore, World world, Random rand, int x, int z, int minY, int maxY, int size, int chances) {
@@ -44,19 +41,6 @@ public class ModWorldGen implements IWorldGenerator {
 			
 			WorldGenMinable generator = new WorldGenMinable(ore, size);
 			generator.generate(world, rand, pos);
-		}
-	}
-	
-	private void generateTree(WorldGenerator generator, World world, Random rand, int chunkX, int chunkZ, int amountPerChunk, Class<?>... classes) {
-		ArrayList<Class<?>> classesList = new ArrayList<Class<?>>(Arrays.asList(classes));
-		for(int i = 0; i < amountPerChunk; i++) {
-			int x = chunkX * 16 + rand.nextInt(16);
-			int z = chunkZ * 16 + rand.nextInt(16);
-			int y = world.getChunkFromChunkCoords(x >> 4, z >> 4).getHeight(new BlockPos(x & 15, 0, z & 15));
-			Class<?> biome = world.provider.getBiomeForCoords(new BlockPos(chunkX * 16, 70, chunkZ * 16)).getClass();
-			if(classesList.contains(biome)) {
-				generator.generate(world, rand, new BlockPos(x, y, z));
-			}
 		}
 	}
 }
