@@ -23,4 +23,9 @@ item.purple_quartz_chestplate.name=Purple Quartz Chestplate
 item.purple_quartz_leggings.name=Purple Quartz Leggings
 item.purple_quartz_boots.name=Purple Quartz Boots
 
+item.tyline_helmet.name=Tyline Helmet
+item.tyline_chestplate.name=Tyline Chestplate
+item.tyline_leggings.name=Tyline Leggings
+item.tyline_boots.name=Tyline Boots
+
 itemGroup.Seeley's Tab=Seeley's Mod

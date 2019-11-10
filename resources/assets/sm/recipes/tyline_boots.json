@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "   ",
+        "P P",
+        "P P"
+    ],
+   
+    "key":
+    {
+        "P":
+        {
+            "item": "sm:tyline_ore"
+        }
+    },
+   
+    "result":
+    {
+        "item": "sm:tyline_boots",
+        "count": 1
+    }
+}
