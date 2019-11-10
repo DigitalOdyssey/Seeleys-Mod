@@ -1,11 +1,12 @@
 package com.thedigitalodyssey.seeleysmod.util.handlers;
 
+import com.thedigitalodyssey.seeleysmod.commands.DimensionTeleportCommand;
 import com.thedigitalodyssey.seeleysmod.init.ModBiomes;
 import com.thedigitalodyssey.seeleysmod.init.ModBlocks;
+import com.thedigitalodyssey.seeleysmod.init.ModDimensions;
 import com.thedigitalodyssey.seeleysmod.init.ModEntities;
 import com.thedigitalodyssey.seeleysmod.init.ModItems;
 import com.thedigitalodyssey.seeleysmod.util.IHasModel;
-import com.thedigitalodyssey.seeleysmod.world.gen.ModWorldGenStructures;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -14,8 +15,8 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler {
@@ -46,11 +47,16 @@ public class RegistryHandler {
 	
 	public static void preInitRegistries(FMLPreInitializationEvent event) {
 		ModBiomes.registerBiomes();
+		ModDimensions.registerDimensions();
 		ModEntities.registerEntities();
 		RenderHandler.registerEntityRenders();
 	}
 	
 	public static void initRegistries(FMLInitializationEvent event) {
 		SoundsHandler.registerSounds();
+	}
+	
+	public static void serverRegistries(FMLServerStartingEvent event) {
+		event.registerServerCommand(new DimensionTeleportCommand());
 	}
 }

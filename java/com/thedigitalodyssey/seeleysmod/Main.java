@@ -1,7 +1,5 @@
 package com.thedigitalodyssey.seeleysmod;
 
-import java.rmi.registry.Registry;
-
 import com.thedigitalodyssey.seeleysmod.init.ModRecipes;
 import com.thedigitalodyssey.seeleysmod.proxy.CommonProxy;
 import com.thedigitalodyssey.seeleysmod.tabs.SeeleysTab;
@@ -17,6 +15,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version =  Reference.VERSION)
@@ -50,4 +49,9 @@ public class Main {
 		
 	}
 	
+	@EventHandler
+	public static void ServerInit(FMLServerStartingEvent event)
+	{
+		RegistryHandler.serverRegistries(event);
+	}
 }
