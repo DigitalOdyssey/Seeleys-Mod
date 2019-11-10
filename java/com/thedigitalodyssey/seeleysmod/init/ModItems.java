@@ -26,6 +26,7 @@ public class ModItems {
 	//Materials
 	public static final ToolMaterial TOOL_PURPLE_QUARTZ = EnumHelper.addToolMaterial("tool_purple_quartz", 3, 1800, 10.0F, 3.0F, 10);
 	public static final ArmorMaterial ARMOR_PURPLE_QUARTZ = EnumHelper.addArmorMaterial("armor_purple_quartz", Reference.MOD_ID+":purple_quartz", 35, new int[] {4,7,9,3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
+	public static final ArmorMaterial ARMOR_TYLINE = EnumHelper.addArmorMaterial("armor_tyline", Reference.MOD_ID+":tyline", 1, new int[] {4,7,9,3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
 	
 	//Items
 	public static final Item PURPLE_QUARTZ = new ItemBase("purple_quartz");
@@ -44,5 +45,10 @@ public class ModItems {
 	public static final Item PURPLE_QUARTZ_CHESTPLATE = new ArmorBase("purple_quartz_chestplate", ARMOR_PURPLE_QUARTZ, 1, EntityEquipmentSlot.CHEST);
 	public static final Item PURPLE_QUARTZ_LEGGINGS = new ArmorBase("purple_quartz_leggings", ARMOR_PURPLE_QUARTZ, 2, EntityEquipmentSlot.LEGS);
 	public static final Item PURPLE_QUARTZ_BOOTS = new ArmorBase("purple_quartz_boots", ARMOR_PURPLE_QUARTZ, 1, EntityEquipmentSlot.FEET);
+	
+	public static final Item TYLINE_HELMET = new ArmorBase("tyline_helmet", ARMOR_TYLINE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item TYLINE_CHESTPLATE = new ArmorBase("tyline_chestplate", ARMOR_TYLINE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item TYLINE_LEGGINGS = new ArmorBase("tyline_leggings", ARMOR_TYLINE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item TYLINE_BOOTS = new ArmorBase("tyline_boots", ARMOR_TYLINE, 1, EntityEquipmentSlot.FEET);
 	
 }

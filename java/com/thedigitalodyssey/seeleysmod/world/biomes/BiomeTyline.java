@@ -10,7 +10,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 public class BiomeTyline extends Biome {
 	
 	public BiomeTyline() {
-		super(new BiomeProperties("Tyline").setBaseHeight(0.0F).setHeightVariation(0.8F).setTemperature(0.95F).setRainDisabled().setWaterColor(54783));
+		super(new BiomeProperties("Tyline").setBaseHeight(0.0F).setHeightVariation(0.002F).setTemperature(0.95F).setRainDisabled().setWaterColor(54783));
 		
 		topBlock = ModBlocks.TYLINE.getDefaultState();
 		fillerBlock = ModBlocks.HARD_TYLINE.getDefaultState();

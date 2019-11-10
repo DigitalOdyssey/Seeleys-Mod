@@ -1,6 +1,7 @@
 package com.thedigitalodyssey.seeleysmod.entity;
 
 import com.thedigitalodyssey.seeleysmod.init.ModItems;
+import com.thedigitalodyssey.seeleysmod.util.handlers.LootTableHandler;
 import com.thedigitalodyssey.seeleysmod.util.handlers.SoundsHandler;
 
 import net.minecraft.entity.EntityAgeable;
@@ -18,6 +19,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
@@ -50,6 +52,11 @@ public class EntityTylin extends EntityCow {
 	@Override
 	public EntityCow createChild(EntityAgeable ageable) {
 		return new EntityTylin(world);
+	}
+	
+	@Override
+	protected ResourceLocation getLootTable() {
+		return LootTableHandler.TYLIN;
 	}
 	
 	@Override
