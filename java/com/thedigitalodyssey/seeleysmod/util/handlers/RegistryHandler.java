@@ -5,16 +5,17 @@ import com.thedigitalodyssey.seeleysmod.init.ModBlocks;
 import com.thedigitalodyssey.seeleysmod.init.ModEntities;
 import com.thedigitalodyssey.seeleysmod.init.ModItems;
 import com.thedigitalodyssey.seeleysmod.util.IHasModel;
+import com.thedigitalodyssey.seeleysmod.world.gen.ModWorldGenStructures;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler {

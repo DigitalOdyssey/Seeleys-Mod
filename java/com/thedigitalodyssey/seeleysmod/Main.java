@@ -7,7 +7,7 @@ import com.thedigitalodyssey.seeleysmod.proxy.CommonProxy;
 import com.thedigitalodyssey.seeleysmod.tabs.SeeleysTab;
 import com.thedigitalodyssey.seeleysmod.util.Reference;
 import com.thedigitalodyssey.seeleysmod.util.handlers.RegistryHandler;
-import com.thedigitalodyssey.seeleysmod.world.ModWorldGen;
+import com.thedigitalodyssey.seeleysmod.world.gen.ModWorldGen;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
